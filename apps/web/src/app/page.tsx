@@ -137,7 +137,7 @@ const Home: React.FC = () => {
                       onClick={() =>
                         router.push(`/pencari-kerja/jobs/${job.id}`)
                       }
-                      className="group relative flex flex-col justify-between rounded-2xl border border-border/70 p-4 cursor-pointer transition-all duration-300 shadow-sm hover:shadow-md hover:border-primary/50 bg-card text-left h-[240px]"
+                      className="group relative flex flex-col justify-between rounded-2xl p-4 cursor-pointer transition-all duration-300 shadow-lg hover:shadow-lg bg-card text-left h-[240px]"
                     >
                       <div>
                         {/* Header: Logo, Title, and Bookmark */}

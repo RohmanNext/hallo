@@ -48,7 +48,7 @@ export default function DashboardApplications({
   if (!user) return null;
 
   return (
-    <div className="bg-card border border-border/70 rounded-3xl p-5 md:p-6 shadow-sm flex flex-col h-[882px] overflow-hidden animate-in fade-in duration-300 justify-between">
+    <div className="bg-card rounded-3xl p-5 md:p-6 shadow-lg flex flex-col h-[882px] overflow-hidden animate-in fade-in duration-300 justify-between">
       <div className="flex flex-col flex-1 overflow-hidden">
         <div className="space-y-1 pb-4 border-b shrink-0 mb-4">
           <span className="text-base font-extrabold text-foreground tracking-tight block">
@@ -121,13 +121,13 @@ export default function DashboardApplications({
               return (
                 <div
                   key={app.id}
-                  className="bg-card border border-border/60 rounded-2xl p-4 md:p-4.5 shadow-xs flex flex-col gap-3 hover:border-primary/40 transition-all"
+                  className="bg-card border border-border/60 rounded-2xl p-4 md:p-4.5 shadow-sm flex flex-col gap-3 hover:border-primary/40 transition-all"
                 >
                   {/* Top section: Logo, Job Info, Timeline, Status Badge */}
                   <div className="flex flex-col md:flex-row md:items-start justify-between gap-5 relative">
                     {/* Left section: Circular Logo and Job Metadata */}
                     <div className="flex items-start gap-3 min-w-0 flex-1">
-                      <div className="h-11 w-11 bg-white border border-border/70 rounded-xl p-1.5 flex items-center justify-center shrink-0 overflow-hidden shadow-xs">
+                      <div className="h-11 w-11 bg-white border border-border/70 rounded-xl p-1.5 flex items-center justify-center shrink-0 overflow-hidden shadow-sm">
                         {app.logo && (app.logo.startsWith('/') || app.logo.startsWith('http')) ? (
                           <Image
                             src={app.logo}

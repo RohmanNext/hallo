@@ -702,9 +702,9 @@ const JobsPage: React.FC = () => {
         <div className="w-full max-w-[90%] mx-auto px-4 md:px-8 pt-7 pb-4">
           <div className="flex flex-col sm:flex-row gap-3 items-center">
             {/* Input Search */}
-            <div className="flex-1 relative w-full">
+            <div className="flex-1 relative w-full group">
               {mounted && theme === 'white' ? (
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-[#5c6f84]" />
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-[#5c6f84] group-focus-within:text-[#1899d6] transition-colors" />
               ) : (
                 <Briefcase className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
               )}
@@ -717,7 +717,7 @@ const JobsPage: React.FC = () => {
                 }
                 className={
                   mounted && theme === 'white'
-                    ? 'pl-9 h-10 text-xs bg-[#eef5fa] border border-border! rounded-lg text-[#334155] placeholder-[#5c6f84] focus-visible:ring-1 focus-visible:ring-[#eef5fa]/50 focus-visible:ring-offset-0 shadow-none!'
+                    ? 'pl-9 h-10 text-xs bg-[#eef5fa] focus:bg-[#cfe6f3] border-0 rounded-lg text-[#334155] placeholder-[#5c6f84] focus:placeholder-[#4a6b7c] focus-visible:ring-1 focus-visible:ring-transparent focus-visible:ring-offset-0 shadow-none! transition-colors'
                     : 'pl-9 h-10 text-xs bg-background/50 border border-border! rounded-lg placeholder-zinc-500 dark:placeholder-zinc-400 shadow-none!'
                 }
                 value={searchQuery}
@@ -726,9 +726,9 @@ const JobsPage: React.FC = () => {
             </div>
 
             {/* City Selector - Custom always-downward dropdown */}
-            <div className="w-full sm:w-96 relative" ref={locationDropdownRef}>
+            <div className="w-full sm:w-96 relative group" ref={locationDropdownRef}>
               <MapPin
-                className={`absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 z-10 pointer-events-none ${mounted && theme === 'white' ? 'text-[#5c6f84]' : 'text-muted-foreground'}`}
+                className={`absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 z-10 pointer-events-none ${mounted && theme === 'white' ? 'text-[#5c6f84] group-focus-within:text-[#1899d6] transition-colors' : 'text-muted-foreground'}`}
               />
               <button
                 type="button"
@@ -738,7 +738,7 @@ const JobsPage: React.FC = () => {
                 }}
                 className={`w-full h-10 pl-9 pr-9 text-xs rounded-lg outline-none cursor-pointer text-left flex items-center ${
                   mounted && theme === 'white'
-                    ? 'bg-[#eef5fa] border border-border! text-[#334155]'
+                    ? 'bg-[#eef5fa] focus:bg-[#cfe6f3] border-0 text-[#334155] transition-colors'
                     : 'bg-background border border-border! text-foreground'
                 }`}
               >
@@ -778,7 +778,7 @@ const JobsPage: React.FC = () => {
                       onChange={(e) => setLocationSearch(e.target.value)}
                       className={`w-full px-2 py-1 text-xs rounded outline-none ${
                         mounted && theme === 'white'
-                          ? 'bg-[#eef5fa] text-[#334155] placeholder-[#5c6f84]'
+                          ? 'bg-[#eef5fa] focus:bg-[#cfe6f3] text-[#334155] placeholder-[#5c6f84] transition-colors'
                           : 'bg-muted text-foreground placeholder-muted-foreground'
                       }`}
                     />
@@ -850,11 +850,11 @@ const JobsPage: React.FC = () => {
         </div>
       </div>
 
-      <div className="w-full max-w-[90%] mx-auto px-4 md:px-8 pt-4 pb-20">
+      <div className="w-full max-w-[90%] mx-auto px-4 md:px-8 pt-2 pb-20">
         <div className="flex flex-col lg:flex-row gap-6">
           {/* Left Sidebar - Filters */}
           <aside
-            className={`lg:w-62 shrink-0 ${showFilters ? 'block' : 'hidden lg:block'} space-y-4`}
+            className={`lg:w-62 shrink-0 ${showFilters ? 'block' : 'hidden lg:block'} space-y-4 pt-10`}
           >
             {/* Download App QR Code Card */}
             <Card className="border bg-card/60 backdrop-blur-md shadow-sm p-4 flex items-center gap-4 relative z-30">
@@ -1282,15 +1282,6 @@ const JobsPage: React.FC = () => {
               </CardContent>
             </Card>
 
-            <Card className="border bg-card/60 backdrop-blur-md shadow-sm p-4 relative z-10">
-              <button
-                onClick={() => setIsHelpOpen(true)}
-                className="w-full py-2 border rounded-lg hover:bg-accent text-xs font-semibold flex items-center justify-center gap-1.5 transition-all cursor-pointer bg-transparent"
-              >
-                <HelpIcon className="h-4 w-4 text-muted-foreground" />
-                Help Center
-              </button>
-            </Card>
           </aside>
 
           <div className="flex-1 space-y-4 pb-4 pt-0">
@@ -1299,7 +1290,7 @@ const JobsPage: React.FC = () => {
                 <strong className="font-extrabold text-foreground">
                   {filteredJobs.length.toLocaleString('id-ID')}
                 </strong>{' '}
-                Jobs Found
+<span className="ml-0.5">lowongan</span>
               </span>
 
               <div className="flex items-center gap-2">
@@ -1371,7 +1362,7 @@ const JobsPage: React.FC = () => {
                       onClick={() => {
                         router.push(`/pencari-kerja/jobs/${job.id}`);
                       }}
-                      className="group relative flex flex-col justify-between rounded-xl border border-border/70 py-4 px-5 cursor-pointer transition-all duration-300 shadow-md hover:shadow-lg hover:border-primary/50 bg-card"
+                      className="group relative flex flex-col justify-between rounded-xl py-4 px-5 cursor-pointer transition-all duration-300 shadow-lg hover:shadow-lg bg-card"
                     >
                       <div className="flex flex-col justify-between h-full">
                         <div>

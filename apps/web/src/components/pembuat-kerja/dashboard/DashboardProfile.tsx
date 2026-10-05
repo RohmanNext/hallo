@@ -480,7 +480,7 @@ const ProfileTab: React.FC = () => {
 
   return (
     <>
-      <div className="bg-card border border-border/70 rounded-3xl p-5 md:p-6 shadow-md flex flex-col h-[882px] overflow-hidden max-w-4xl mx-auto animate-in fade-in duration-300">
+      <div className="bg-card rounded-3xl p-5 md:p-6 shadow-lg flex flex-col h-[882px] overflow-hidden max-w-4xl mx-auto animate-in fade-in duration-300">
       {/* ===== PRINT ONLY: Modern Company Profile Card ===== */}
       <style>{`
         @media print {
@@ -694,7 +694,7 @@ const ProfileTab: React.FC = () => {
               <button
                 type="button"
                 onClick={() => setShowPicker((prev) => !prev)}
-                className="flex items-center justify-center bg-black/40 hover:bg-black/60 backdrop-blur-sm border border-white/20 text-white p-2 rounded-full transition-all cursor-pointer shadow-sm"
+                className="flex items-center justify-center bg-black/40 hover:bg-black/60 backdrop-blur-sm border border-white/20 text-white p-2 rounded-full transition-all cursor-pointer shadow-lg"
                 title="Ganti foto latar"
               >
                 <ImageIcon className="h-4 w-4" />
@@ -736,7 +736,7 @@ const ProfileTab: React.FC = () => {
                 <button
                   type="button"
                   onClick={() => setShowPicker(false)}
-                  className="h-6 w-6 rounded-full bg-rose-500 hover:bg-rose-600 flex items-center justify-center transition-colors cursor-pointer shadow-sm border-none"
+                  className="h-6 w-6 rounded-full bg-rose-500 hover:bg-rose-600 flex items-center justify-center transition-colors cursor-pointer shadow-lg border-none"
                 >
                   <X className="h-3.5 w-3.5 text-white" />
                 </button>
@@ -820,7 +820,7 @@ const ProfileTab: React.FC = () => {
               <button
                 type="button"
                 onClick={() => setShowLogoModal(true)}
-                className="h-20 w-20 md:h-24 md:w-24 rounded-2xl overflow-hidden shadow-md bg-muted/40 relative group cursor-pointer p-0 text-left shrink-0 transition-transform hover:scale-105 duration-200 flex items-center justify-center"
+                className="h-20 w-20 md:h-24 md:w-24 rounded-2xl overflow-hidden shadow-lg bg-muted/40 relative group cursor-pointer p-0 text-left shrink-0 transition-transform hover:scale-105 duration-200 flex items-center justify-center"
                 title="Ubah Foto Profil"
               >
                 {logoUrl ? (
@@ -845,22 +845,22 @@ const ProfileTab: React.FC = () => {
                 {/* Badges: Verifikasi & Premium */}
                 <div className="flex flex-wrap items-center gap-2 justify-center sm:justify-start">
                   {isVerified ? (
-                    <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-emerald-500/90 text-white font-extrabold text-[12px] border border-emerald-400/50 shadow-md">
+                    <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-emerald-500/90 text-white font-extrabold text-[12px] border border-emerald-400/50 shadow-lg">
                       <ShieldCheck className="h-3 w-3" />
                       Terverifikasi
                     </span>
                   ) : (
-                    <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-slate-500/80 text-white font-extrabold text-[12px] border border-slate-400/50 shadow-sm">
+                    <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-slate-500/80 text-white font-extrabold text-[12px] border border-slate-400/50 shadow-lg">
                       Belum Verifikasi
                     </span>
                   )}
                   {isPremium ? (
-                    <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-amber-500/90 text-white font-extrabold text-[12px] border border-amber-400/50 shadow-md">
+                    <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-amber-500/90 text-white font-extrabold text-[12px] border border-amber-400/50 shadow-lg">
                       <CheckCircle className="h-3 w-3 text-white" />
                       Premium
                     </span>
                   ) : (
-                    <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-slate-500/80 text-white font-extrabold text-[12px] border border-slate-400/50 shadow-sm">
+                    <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-slate-500/80 text-white font-extrabold text-[12px] border border-slate-400/50 shadow-lg">
                       Standard Plan
                     </span>
                   )}
@@ -873,7 +873,7 @@ const ProfileTab: React.FC = () => {
                 <Button
                   type="button"
                   onClick={() => setShowRequestUpdateModal(true)}
-                  className="h-8 gap-1.5 cursor-pointer font-bold text-xs bg-orange-500 hover:bg-orange-600 text-white shadow-md"
+                  className="h-8 gap-1.5 cursor-pointer font-bold text-xs bg-orange-500 hover:bg-orange-600 text-white shadow-lg"
                 >
                   <Upload className="w-3.5 h-3.5" />
                   Request Update Document
@@ -883,7 +883,7 @@ const ProfileTab: React.FC = () => {
                 type="button"
                 onClick={() => window.print()}
                 variant="outline"
-                className="h-8 gap-1.5 cursor-pointer font-bold border-border/60 text-xs text-foreground bg-background shadow-md"
+                className="h-8 gap-1.5 cursor-pointer font-bold border-border/60 text-xs text-foreground bg-background shadow-lg"
               >
                 <span>export ke pdf</span>
               </Button>
@@ -893,7 +893,7 @@ const ProfileTab: React.FC = () => {
       </div>
  
       {/* Galeri Kantor */}
-      <Card className="bg-card border border-border/70 rounded-2xl shadow-md p-6 relative">
+      <Card className="bg-card border border-border/70 rounded-2xl shadow-lg p-6 relative">
         <div className="flex items-center justify-between mb-5">
           <h3 className="text-sm font-black text-slate-800 dark:text-slate-200 uppercase tracking-wider">
             Galeri Kantor
@@ -967,7 +967,7 @@ const ProfileTab: React.FC = () => {
                   <button
                     type="button"
                     onClick={() => handleRemoveImage(i)}
-                    className="absolute top-2 right-2 p-1.5 bg-rose-600/80 hover:bg-rose-600 text-white rounded-full transition-all opacity-0 group-hover:opacity-100 cursor-pointer shadow-sm border-none z-10"
+                    className="absolute top-2 right-2 p-1.5 bg-rose-600/80 hover:bg-rose-600 text-white rounded-full transition-all opacity-0 group-hover:opacity-100 cursor-pointer shadow-lg border-none z-10"
                     title="Hapus Foto"
                   >
                     <X className="h-3 w-3" />
@@ -1011,7 +1011,7 @@ const ProfileTab: React.FC = () => {
                   <button
                     type="button"
                     onClick={() => handleRemoveVideo(i)}
-                    className="absolute top-2 right-2 p-1.5 bg-rose-600/80 hover:bg-rose-600 text-white rounded-full transition-all opacity-0 group-hover:opacity-100 cursor-pointer shadow-sm border-none z-10"
+                    className="absolute top-2 right-2 p-1.5 bg-rose-600/80 hover:bg-rose-600 text-white rounded-full transition-all opacity-0 group-hover:opacity-100 cursor-pointer shadow-lg border-none z-10"
                     title="Hapus Video"
                   >
                     <X className="h-3 w-3" />
@@ -1036,7 +1036,7 @@ const ProfileTab: React.FC = () => {
       </Card>
 
       {/* Tim Kami */}
-      <Card className="bg-card border border-border/70 rounded-2xl shadow-md p-6 relative">
+      <Card className="bg-card border border-border/70 rounded-2xl shadow-lg p-6 relative">
         <div className="flex items-center justify-between mb-5">
           <h3 className="text-sm font-black text-slate-800 dark:text-slate-200 uppercase tracking-wider">
             Tim Kami
@@ -1198,7 +1198,7 @@ const ProfileTab: React.FC = () => {
             <Button
               type="button"
               onClick={handleAddWorker}
-              className="w-full bg-blue-600 hover:bg-blue-700 text-white font-extrabold h-9 rounded-xl cursor-pointer border-none shadow-sm text-xs"
+              className="w-full bg-blue-600 hover:bg-blue-700 text-white font-extrabold h-9 rounded-xl cursor-pointer border-none shadow-lg text-xs"
             >
               Tambah Anggota Tim
             </Button>
@@ -1210,7 +1210,7 @@ const ProfileTab: React.FC = () => {
       <Toaster position="top-center" richColors />
 
       {/* Section 1: Logo & NIB */}
-      <Card className="bg-card border border-border/70 rounded-2xl shadow-md p-6 relative">
+      <Card className="bg-card border border-border/70 rounded-2xl shadow-lg p-6 relative">
         <form onSubmit={(e) => e.preventDefault()} className="space-y-6">
           {/* Logo Perusahaan Section */}
           <div className="flex flex-col items-center justify-center pb-6">
@@ -1220,7 +1220,7 @@ const ProfileTab: React.FC = () => {
             <button
               type="button"
               onClick={() => setShowLogoModal(true)}
-              className="h-24 w-24 rounded-2xl overflow-hidden border-4 border-card shadow-md bg-muted/40 relative group cursor-pointer border-none p-0 text-left shrink-0"
+              className="h-24 w-24 rounded-2xl overflow-hidden border-4 border-card shadow-lg bg-muted/40 relative group cursor-pointer border-none p-0 text-left shrink-0"
               title="Ubah Foto Profil"
             >
               {logoUrl ? (
@@ -1275,7 +1275,7 @@ const ProfileTab: React.FC = () => {
 
       {/* Section 2: Informasi Dasar & Kontak Perusahaan */}
       <form onSubmit={infoFormik.handleSubmit} className="space-y-6">
-        <Card className="bg-card border border-border/70 rounded-2xl shadow-md p-6 relative">
+        <Card className="bg-card border border-border/70 rounded-2xl shadow-lg p-6 relative">
           <div className="flex items-center justify-between mb-5">
             <div className="space-y-1">
               <h3 className="text-sm font-black text-slate-800 dark:text-slate-200 uppercase tracking-wider">
@@ -1585,7 +1585,7 @@ const ProfileTab: React.FC = () => {
         </Card>
 
         {/* Section 3: Kontak Perusahaan */}
-        <Card className="bg-card border border-border/70 rounded-2xl shadow-md p-6 relative">
+        <Card className="bg-card border border-border/70 rounded-2xl shadow-lg p-6 relative">
           <div className="flex items-center justify-between mb-5">
             <h3 className="text-sm font-black text-slate-800 dark:text-slate-200 uppercase tracking-wider">
               Kontak Perusahaan

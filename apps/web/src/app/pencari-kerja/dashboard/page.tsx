@@ -158,7 +158,7 @@ function PencariDashboardContent() {
       </div>
 
       {/* Main Layout */}
-      <div className="flex-1 w-full mx-auto px-4 md:px-8 py-6 md:py-10 flex flex-col md:flex-row gap-8 h-auto overflow-hidden max-w-[90%]">
+      <div className="flex-1 w-full mx-auto px-4 md:px-8 py-6 md:py-7 flex flex-col md:flex-row gap-8 h-auto overflow-hidden max-w-[90%]">
         {/* Desktop Sidebar */}
         <aside className="hidden md:flex flex-col w-56 lg:w-64 shrink-0 border border-border/70 bg-card p-4 rounded-3xl shadow-xs h-fit">
           <SidebarContent />

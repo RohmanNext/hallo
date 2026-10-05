@@ -192,7 +192,7 @@ export default function DashboardOverview({
         <div className="absolute top-4 right-4 z-20">
           <button
             onClick={() => setShowPicker((prev) => !prev)}
-            className="flex items-center justify-center bg-black/40 hover:bg-black/60 backdrop-blur-sm border border-white/20 text-white p-2 rounded-full transition-all cursor-pointer shadow-sm"
+            className="flex items-center justify-center bg-black/40 hover:bg-black/60 backdrop-blur-sm border border-white/20 text-white p-2 rounded-full transition-all cursor-pointer shadow-lg"
             title="Ganti foto latar"
           >
             <ImageIcon className="h-4 w-4" />
@@ -241,7 +241,7 @@ export default function DashboardOverview({
               </div>
               <button
                 onClick={() => setShowPicker(false)}
-                className="h-6 w-6 rounded-full bg-rose-500 hover:bg-rose-600 flex items-center justify-center transition-colors cursor-pointer shadow-sm border-none"
+                className="h-6 w-6 rounded-full bg-rose-500 hover:bg-rose-600 flex items-center justify-center transition-colors cursor-pointer shadow-lg border-none"
               >
                 <X className="h-3.5 w-3.5 text-white" />
               </button>
@@ -350,7 +350,7 @@ export default function DashboardOverview({
           return (
             <Card
               key={idx}
-              className="p-4 md:p-5 flex flex-col justify-between border border-border/80 hover:border-primary/40 transition-all shadow-sm hover:shadow-md cursor-pointer group"
+              className="p-4 md:p-5 flex flex-col justify-between border border-border/80 hover:border-primary/40 transition-all shadow-lg hover:shadow-md cursor-pointer group"
               onClick={() => onNavigate(stat.tab)}
             >
               <div className="flex items-center justify-between">
@@ -377,7 +377,7 @@ export default function DashboardOverview({
       {/* Split Section */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         {/* Left 2 Columns: Applications Listing with Search and Scroll */}
-        <div className="lg:col-span-2 bg-card border border-border/70 rounded-2xl p-5 shadow-sm space-y-4">
+        <div className="lg:col-span-2 bg-card border border-border/70 rounded-2xl p-5 shadow-lg space-y-4">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-1">
             <span className="font-semibold text-sm text-foreground block">
               Lamaran Saya
@@ -419,7 +419,7 @@ export default function DashboardOverview({
                   className="flex items-center justify-between p-3 bg-background/30 border border-border/60 rounded-xl hover:bg-background/50 transition-colors"
                 >
                   <div className="flex items-center gap-3 min-w-0">
-                    <div className="h-9 w-9 bg-white border border-border/70 rounded-xl p-1.5 flex items-center justify-center shrink-0 overflow-hidden shadow-xs relative">
+                    <div className="h-9 w-9 bg-white border border-border/70 rounded-xl p-1.5 flex items-center justify-center shrink-0 overflow-hidden shadow-sm relative">
                       {app.logo ? (
                         <Image
                           src={app.logo}
@@ -480,7 +480,7 @@ export default function DashboardOverview({
 
         {/* Right Column: Profile Completeness Checklist */}
         <div className="space-y-6">
-          <div className="bg-card border border-border/70 rounded-2xl p-5 shadow-sm space-y-4">
+          <div className="bg-card border border-border/70 rounded-2xl p-5 shadow-lg space-y-4">
             <span className="font-semibold text-sm text-foreground tracking-tight block">
               Kekuatan Profil Kamu
             </span>

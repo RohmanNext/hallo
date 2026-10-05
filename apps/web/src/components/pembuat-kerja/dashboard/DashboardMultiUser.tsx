@@ -108,7 +108,7 @@ const MultiUserTab: React.FC = () => {
         </Button>
       </div>
 
-      <div className="bg-card border border-border/60 rounded-3xl overflow-hidden shadow-sm">
+      <div className="bg-card rounded-3xl overflow-hidden shadow-lg">
         <div className="overflow-x-auto">
           <table className="w-full text-sm text-left">
             <thead className="text-xs text-muted-foreground uppercase bg-muted/40 border-b border-border/60">

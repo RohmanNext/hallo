@@ -84,11 +84,11 @@ const OfferCard = ({
   }, [offer.message]);
 
   return (
-    <div className="bg-card border border-border/60 rounded-2xl p-4 md:p-4.5 shadow-xs flex flex-col gap-3.5 hover:border-primary/40 transition-all group">
+    <div className="bg-card border border-border/60 rounded-2xl p-4 md:p-4.5 shadow-sm flex flex-col gap-3.5 hover:border-primary/40 transition-all group">
       {/* Header block */}
       <div className="flex items-start justify-between gap-4">
         <div className="flex items-start gap-3 min-w-0">
-          <div className="h-11 w-11 bg-white border border-border/70 rounded-xl p-1.5 flex items-center justify-center shrink-0 overflow-hidden shadow-xs">
+          <div className="h-11 w-11 bg-white border border-border/70 rounded-xl p-1.5 flex items-center justify-center shrink-0 overflow-hidden shadow-sm">
             {offer.companyLogo ? (
               <Image
                 src={offer.companyLogo}
@@ -270,7 +270,7 @@ export default function DashboardOffers({ onNavigate }: DashboardOffersProps) {
   });
 
   return (
-    <div className="bg-card border border-border/70 rounded-3xl p-5 md:p-6 shadow-sm flex flex-col h-[880px] overflow-hidden animate-in fade-in duration-300 justify-between">
+    <div className="bg-card rounded-3xl p-5 md:p-6 shadow-lg flex flex-col h-[880px] overflow-hidden animate-in fade-in duration-300 justify-between">
       <div className="flex flex-col flex-1 overflow-hidden">
         {/* Header */}
         <div className="space-y-1 pb-4 border-b shrink-0 mb-4 flex items-center justify-between">
@@ -356,7 +356,7 @@ export default function DashboardOffers({ onNavigate }: DashboardOffersProps) {
             </button>
 
             <div className="flex items-center gap-4 pb-2 mb-3 pr-8">
-              <div className="h-14 w-14 bg-white border border-border/70 rounded-2xl p-2.5 flex items-center justify-center shrink-0 shadow-md">
+              <div className="h-14 w-14 bg-white border border-border/70 rounded-2xl p-2.5 flex items-center justify-center shrink-0 shadow-lg">
                 {selectedOffer.companyLogo ? (
                   <Image
                     src={selectedOffer.companyLogo}
@@ -387,7 +387,7 @@ export default function DashboardOffers({ onNavigate }: DashboardOffersProps) {
 
             <div className="flex-1 overflow-y-auto space-y-5 pr-1 smooth-scroll text-xs">
               <div className="flex flex-wrap gap-2">
-                <div className="flex items-center gap-1.5 bg-muted/20 border border-border/50 px-3 py-1.5 rounded-lg text-[12px] font-medium text-foreground w-fit shadow-xs">
+                <div className="flex items-center gap-1.5 bg-muted/20 border border-border/50 px-3 py-1.5 rounded-lg text-[12px] font-medium text-foreground w-fit shadow-sm">
                   <Coins className="h-3.5 w-3.5 text-muted-foreground shrink-0" />
                   <span className="text-muted-foreground">Tawaran Gaji:</span>
                   <span className="font-bold text-foreground">
@@ -402,7 +402,7 @@ export default function DashboardOffers({ onNavigate }: DashboardOffersProps) {
                 <span className="text-[12px] text-muted-foreground font-bold uppercase block tracking-wider mb-2">
                   Pesan Rekruter
                 </span>
-                <div className="bg-primary/5 border border-primary/10 dark:bg-primary/10 dark:border-primary/20 p-4.5 rounded-2xl shadow-xs">
+                <div className="bg-primary/5 border border-primary/10 dark:bg-primary/10 dark:border-primary/20 p-4.5 rounded-2xl shadow-sm">
                   <p className="font-medium leading-relaxed whitespace-pre-wrap text-foreground/90 text-xs not-italic max-h-[220px] overflow-y-auto smooth-scroll pr-1.5 scrollbar-thin">
                     &quot;{selectedOffer.message}&quot;
                   </p>

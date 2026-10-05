@@ -141,7 +141,7 @@ export default function DashboardChat() {
 
   return (
     <div className='h-[880px]'>
-    <div className="bg-card border border-border/75 rounded-3xl p-2 shadow-md flex h-[595px] overflow-hidden animate-in fade-in duration-300">
+    <div className="bg-card rounded-3xl p-2 shadow-lg flex h-[595px] overflow-hidden animate-in fade-in duration-300">
       {/* Left Panel: Contacts List */}
       <div
         className={`w-full md:w-60 lg:w-72 border-r border-border/60 flex flex-col h-full bg-card/10 shrink-0 ${
@@ -186,7 +186,7 @@ export default function DashboardChat() {
               }`}
             >
               {/* Logo */}
-              <div className="relative h-8 w-8 bg-white border border-border/70 rounded-xl p-1 flex items-center justify-center shrink-0 overflow-hidden shadow-xs">
+              <div className="relative h-8 w-8 bg-white border border-border/70 rounded-xl p-1 flex items-center justify-center shrink-0 overflow-hidden shadow-sm">
                 <span className="text-[12px] font-black text-muted-foreground">
                   {contact.logo}
                 </span>
@@ -283,7 +283,7 @@ export default function DashboardChat() {
                     className={`flex ${isUser ? 'justify-end' : 'justify-start'}`}
                   >
                     <div
-                      className={`max-w-[80%] rounded-xl px-3 py-2 text-xs shadow-xs relative group ${
+                      className={`max-w-[80%] rounded-xl px-3 py-2 text-xs shadow-sm relative group ${
                         isUser
                           ? 'bg-primary text-primary-foreground rounded-tr-none'
                           : 'bg-card border border-border/60 text-card-foreground rounded-tl-none'

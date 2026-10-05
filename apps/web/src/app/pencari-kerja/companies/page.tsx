@@ -165,9 +165,9 @@ const CompanyList: React.FC = () => {
 
             {/* Search Selection Section */}
             <div className="flex flex-col sm:flex-row gap-3 items-center">
-              <div className="flex-1 relative w-full">
+              <div className="flex-1 relative w-full group">
                 {mounted && theme === 'white' ? (
-                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-[#5c6f84]" />
+                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-[#5c6f84] group-focus-within:text-[#1899d6] transition-colors" />
                 ) : (
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
                 )}
@@ -176,7 +176,7 @@ const CompanyList: React.FC = () => {
                   placeholder="Cari nama perusahaan atau industri..."
                   className={
                     mounted && theme === 'white'
-                      ? 'pl-9 h-10 text-xs bg-[#eef5fa] border border-border! rounded-lg text-[#334155] placeholder-[#5c6f84] focus-visible:ring-1 focus-visible:ring-[#eef5fa]/50 focus-visible:ring-offset-0 shadow-none!'
+                      ? 'pl-9 h-10 text-xs bg-[#eef5fa] focus:bg-[#cfe6f3] border-0 rounded-lg text-[#334155] placeholder-[#5c6f84] focus:placeholder-[#4a6b7c] focus-visible:ring-1 focus-visible:ring-transparent focus-visible:ring-offset-0 shadow-none! transition-colors'
                       : 'pl-9 h-10 text-xs bg-background/50 border border-border! rounded-lg placeholder-zinc-500 dark:placeholder-zinc-400 shadow-none!'
                   }
                   value={searchQuery}
@@ -185,9 +185,9 @@ const CompanyList: React.FC = () => {
               </div>
 
               {/* Custom always-downward location dropdown */}
-              <div className="flex-1 relative w-full" ref={locationDropdownRef}>
+              <div className="flex-1 relative w-full group" ref={locationDropdownRef}>
                 <MapPin
-                  className={`absolute left-3 top-5 transform -translate-y-1/2 h-4 w-4 z-10 pointer-events-none ${mounted && theme === 'white' ? 'text-[#5c6f84]' : 'text-muted-foreground'}`}
+                  className={`absolute left-3 top-5 transform -translate-y-1/2 h-4 w-4 z-10 pointer-events-none ${mounted && theme === 'white' ? 'text-[#5c6f84] group-focus-within:text-[#1899d6] transition-colors' : 'text-muted-foreground'}`}
                 />
                 <button
                   type="button"
@@ -197,7 +197,7 @@ const CompanyList: React.FC = () => {
                   }}
                   className={`w-full h-10 pl-9 pr-9 text-xs rounded-lg outline-none cursor-pointer text-left flex items-center ${
                     mounted && theme === 'white'
-                      ? 'bg-[#eef5fa] border border-border! text-[#334155]'
+                      ? 'bg-[#eef5fa] focus:bg-[#cfe6f3] border-0 text-[#334155] transition-colors'
                       : 'bg-background border border-border! text-foreground'
                   }`}
                 >
@@ -237,7 +237,7 @@ const CompanyList: React.FC = () => {
                         onChange={(e) => setLocationSearch(e.target.value)}
                         className={`w-full px-2 py-1 text-xs rounded outline-none ${
                           mounted && theme === 'white'
-                            ? 'bg-[#eef5fa] text-[#334155] placeholder-[#5c6f84]'
+                            ? 'bg-[#eef5fa] focus:bg-[#cfe6f3] text-[#334155] placeholder-[#5c6f84] transition-colors'
                             : 'bg-muted text-foreground placeholder-muted-foreground'
                         }`}
                       />
@@ -307,7 +307,7 @@ const CompanyList: React.FC = () => {
               <strong className="font-extrabold text-foreground">
                 {filteredCompanies.length.toLocaleString('id-ID')}
               </strong>{' '}
-              Company found
+              <span className="ml-0.5">perusahaan</span>
             </p>
           </div>
 
@@ -354,7 +354,7 @@ const CompanyList: React.FC = () => {
           {paginatedCompanies.map((company) => (
             <Card
               key={company.id}
-              className="hover:shadow-md border bg-card/60 backdrop-blur-sm transition-all duration-200 group flex flex-col justify-between overflow-hidden"
+              className="shadow-lg hover:shadow-lg border-0 bg-card/60 backdrop-blur-sm transition-all duration-200 group flex flex-col justify-between overflow-hidden"
             >
               <CardHeader className="py-5">
                 <div className="flex items-start justify-between">

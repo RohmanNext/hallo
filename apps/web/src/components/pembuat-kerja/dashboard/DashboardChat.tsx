@@ -85,7 +85,7 @@ const ChatSettingTab: React.FC = () => {
 
   return (
     <div className="max-w-3xl mx-auto space-y-6 animate-in fade-in duration-300">
-      <div className="bg-card border border-border/70 rounded-3xl p-6 shadow-md space-y-6">
+      <div className="bg-card rounded-3xl p-6 shadow-lg space-y-6">
         <div className="flex items-center gap-3 border-b border-border pb-4">
           <div className="h-10 w-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary">
             <MessageSquare className="h-5 w-5" />

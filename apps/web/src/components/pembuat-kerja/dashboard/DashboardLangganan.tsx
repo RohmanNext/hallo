@@ -59,7 +59,7 @@ const LanggananTab: React.FC = () => {
   const hasSubscription = user?.plan && user.plan !== 'Free';
 
   return (
-    <div className="bg-card border border-border/70 rounded-3xl p-5 md:p-6 shadow-md flex flex-col h-[880px] overflow-hidden animate-in fade-in duration-300">
+    <div className="bg-card rounded-3xl p-5 md:p-6 shadow-lg flex flex-col h-[880px] overflow-hidden animate-in fade-in duration-300">
       <div className="space-y-1 pb-4 border-b shrink-0 mb-4">
         <h2 className="text-base font-extrabold text-foreground tracking-tight">
           Langganan
@@ -85,7 +85,7 @@ const LanggananTab: React.FC = () => {
         </div>
 
         {hasSubscription ? (
-          <div className="mt-12 p-8 bg-emerald-500/5 border border-emerald-500/15 rounded-3xl text-center space-y-4 max-w-xl mx-auto shadow-sm">
+          <div className="mt-12 p-8 bg-emerald-500/5 border border-emerald-500/15 rounded-3xl text-center space-y-4 max-w-xl mx-auto shadow-lg">
             <h3 className="text-lg font-black text-foreground uppercase tracking-tight mt-6">
               Anda sudah berlangganan di plan {user.plan}!
             </h3>
@@ -112,12 +112,12 @@ const LanggananTab: React.FC = () => {
                 key={idx}
                 className={`border p-6 rounded-3xl flex flex-col justify-between transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5 cursor-pointer bg-card/40 hover:bg-card/85 ${
                   pl.popular
-                    ? 'border-emerald-500 shadow-md relative scale-102 z-10 ring-2 ring-emerald-500/20'
-                    : 'border-border/60 shadow-xs'
+                    ? 'border-emerald-500 shadow-lg relative scale-102 z-10 ring-2 ring-emerald-500/20'
+                    : 'border-border/60 shadow-sm'
                 }`}
               >
                 {pl.popular && (
-                  <span className="absolute -top-3.5 left-1/2 transform -translate-x-1/2 text-xs font-bold px-3.5 py-1 h-7 rounded-full shadow-sm flex items-center bg-emerald-500/10 border border-emerald-500/30 text-emerald-500 tracking-wider backdrop-blur-sm">
+                  <span className="absolute -top-3.5 left-1/2 transform -translate-x-1/2 text-xs font-bold px-3.5 py-1 h-7 rounded-full shadow-lg flex items-center bg-emerald-500/10 border border-emerald-500/30 text-emerald-500 tracking-wider backdrop-blur-sm">
                     Paling Populer
                   </span>
                 )}

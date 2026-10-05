@@ -419,7 +419,7 @@ export default function DashboardProfile({
   };
 
   return (
-    <div className="bg-card border border-border/70 rounded-3xl p-5 md:p-6 shadow-md flex flex-col h-[882px] overflow-hidden animate-in fade-in duration-300">
+    <div className="bg-card rounded-3xl p-5 md:p-6 shadow-lg flex flex-col h-[882px] overflow-hidden animate-in fade-in duration-300">
       {/* ===== PRINT ONLY: Modern Seeker Profile Card ===== */}
       <style>{`
         @media print {
@@ -942,7 +942,7 @@ export default function DashboardProfile({
               <div className="absolute top-4 right-4 z-20">
                 <button
                   onClick={() => setShowPicker((prev) => !prev)}
-                  className="flex items-center justify-center bg-black/40 hover:bg-black/60 backdrop-blur-sm border border-white/20 text-white p-2 rounded-full transition-all cursor-pointer shadow-sm"
+                  className="flex items-center justify-center bg-black/40 hover:bg-black/60 backdrop-blur-sm border border-white/20 text-white p-2 rounded-full transition-all cursor-pointer shadow-lg"
                   title="Ganti foto latar"
                 >
                   <ImageIcon className="h-4 w-4" />
@@ -983,7 +983,7 @@ export default function DashboardProfile({
                     </div>
                     <button
                       onClick={() => setShowPicker(false)}
-                      className="h-6 w-6 rounded-full bg-rose-500 hover:bg-rose-600 flex items-center justify-center transition-colors cursor-pointer shadow-sm border-none"
+                      className="h-6 w-6 rounded-full bg-rose-500 hover:bg-rose-600 flex items-center justify-center transition-colors cursor-pointer shadow-lg border-none"
                     >
                       <X className="h-3.5 w-3.5 text-white" />
                     </button>
@@ -1074,7 +1074,7 @@ export default function DashboardProfile({
                 <div className="flex flex-col sm:flex-row items-center sm:items-center gap-3.5 text-center sm:text-left">
                   <button
                     onClick={() => setShowAvatarPicker(true)}
-                    className="h-20 w-20 md:h-24 md:w-24 rounded-2xl overflow-hidden shadow-md bg-muted/40 relative group cursor-pointer p-0 text-left shrink-0 transition-transform hover:scale-105 duration-200 flex items-center justify-center"
+                    className="h-20 w-20 md:h-24 md:w-24 rounded-2xl overflow-hidden shadow-lg bg-muted/40 relative group cursor-pointer p-0 text-left shrink-0 transition-transform hover:scale-105 duration-200 flex items-center justify-center"
                     title="Ubah Foto Profil"
                   >
                     {user.profileImage ? (
@@ -1127,7 +1127,7 @@ export default function DashboardProfile({
         {/* 1-Column Dashboard Layout */}
         <div className="space-y-6 max-w-4xl mx-auto w-full">
           {/* About Me Section */}
-          <div className="bg-card border border-border/70 rounded-2xl p-5 shadow-md space-y-4 relative">
+          <div className="bg-card border border-border/70 rounded-2xl p-5 shadow-lg space-y-4 relative">
             <div className="flex items-center justify-between">
               <h3 className="font-extrabold text-sm text-foreground tracking-tight">
                 Tentang Saya
@@ -1174,7 +1174,7 @@ export default function DashboardProfile({
           </div>
 
           {/* UserProfile Info Section */}
-          <div className="bg-card border border-border/70 rounded-2xl p-5 shadow-md space-y-5 relative">
+          <div className="bg-card border border-border/70 rounded-2xl p-5 shadow-lg space-y-5 relative">
             <div className="flex items-center justify-between">
               <h3 className="font-bold text-[12px] text-muted-foreground uppercase tracking-wider">
                 Informasi Kontak
@@ -1329,7 +1329,7 @@ export default function DashboardProfile({
           </div>
 
           {/* Links & Files Section */}
-          <div className="bg-card border border-border/70 rounded-2xl p-5 shadow-md space-y-5 relative">
+          <div className="bg-card border border-border/70 rounded-2xl p-5 shadow-lg space-y-5 relative">
             <div className="flex items-center justify-between">
               <h3 className="font-bold text-[12px] text-muted-foreground uppercase tracking-wider">
                 Tautan & Dokumen
@@ -1525,7 +1525,7 @@ export default function DashboardProfile({
           </div>
 
           {/* Pengalaman Kerja Section */}
-          <div className="bg-card border border-border/70 rounded-2xl p-5 shadow-md space-y-4 relative">
+          <div className="bg-card border border-border/70 rounded-2xl p-5 shadow-lg space-y-4 relative">
             <div className="flex items-center justify-between">
               <h3 className="font-extrabold text-sm text-foreground tracking-tight">
                 Pengalaman Kerja
@@ -1605,7 +1605,7 @@ export default function DashboardProfile({
                   {formData.experience.map((exp: string) => (
                     <div
                       key={exp}
-                      className="flex items-center justify-between bg-background/50 border border-border/80 text-foreground text-xs font-semibold p-3 rounded-xl shadow-sm hover:border-border transition-all"
+                      className="flex items-center justify-between bg-background/50 border border-border/80 text-foreground text-xs font-semibold p-3 rounded-xl shadow-lg hover:border-border transition-all"
                     >
                       <div className="flex items-center gap-2 min-w-0">
                         <Briefcase className="h-3 w-3 text-foreground shrink-0" />
@@ -1661,7 +1661,7 @@ export default function DashboardProfile({
           </div>
 
           {/* Pendidikan Section */}
-          <div className="bg-card border border-border/70 rounded-2xl p-5 shadow-md space-y-4 relative">
+          <div className="bg-card border border-border/70 rounded-2xl p-5 shadow-lg space-y-4 relative">
             <div className="flex items-center justify-between">
               <h3 className="font-extrabold text-sm text-foreground tracking-tight">
                 Pendidikan
@@ -1741,7 +1741,7 @@ export default function DashboardProfile({
                   {formData.education.map((edu: string) => (
                     <div
                       key={edu}
-                      className="flex items-center justify-between bg-background/50 border border-border/80 text-foreground text-xs font-semibold p-3 rounded-xl shadow-sm hover:border-border transition-all"
+                      className="flex items-center justify-between bg-background/50 border border-border/80 text-foreground text-xs font-semibold p-3 rounded-xl shadow-lg hover:border-border transition-all"
                     >
                       <div className="flex items-center gap-2 min-w-0">
                         <GraduationCap className="h-3 w-3 text-foreground shrink-0" />
@@ -1797,7 +1797,7 @@ export default function DashboardProfile({
           </div>
 
           {/* Skill Section */}
-          <div className="bg-card border border-border/70 rounded-2xl p-5 shadow-md space-y-4 relative">
+          <div className="bg-card border border-border/70 rounded-2xl p-5 shadow-lg space-y-4 relative">
             <div className="flex items-center justify-between">
               <h3 className="font-extrabold text-sm text-foreground tracking-tight">
                 Keahlian / Skill
@@ -1854,7 +1854,7 @@ export default function DashboardProfile({
                   {formData.skill.map((sk: string) => (
                     <div
                       key={sk}
-                      className={`inline-flex items-center gap-1.5 text-[12px] font-semibold pl-2.5 pr-1.5 py-0.5 h-6 rounded-full border shadow-sm select-none ${
+                      className={`inline-flex items-center gap-1.5 text-[12px] font-semibold pl-2.5 pr-1.5 py-0.5 h-6 rounded-full border shadow-lg select-none ${
                         mounted && theme === 'white'
                           ? 'bg-[#eef5fa] border-[#d2e2f0] text-[#334155]'
                           : 'bg-background/50 border-border/80 text-muted-foreground'
@@ -1877,7 +1877,7 @@ export default function DashboardProfile({
                   user.skill.map((sk: string) => (
                     <span
                       key={sk}
-                      className={`inline-flex items-center text-[12px] font-semibold px-2.5 py-0.5 h-6 rounded-full border shadow-sm select-none ${
+                      className={`inline-flex items-center text-[12px] font-semibold px-2.5 py-0.5 h-6 rounded-full border shadow-lg select-none ${
                         mounted && theme === 'white'
                           ? 'bg-[#eef5fa] border-[#d2e2f0] text-[#334155]'
                           : 'bg-background/50 border-border/80 text-muted-foreground'
@@ -1896,7 +1896,7 @@ export default function DashboardProfile({
           </div>
 
           {/* Sertifikat Section */}
-          <div className="bg-card border border-border/70 rounded-2xl p-5 shadow-md space-y-4 relative">
+          <div className="bg-card border border-border/70 rounded-2xl p-5 shadow-lg space-y-4 relative">
             <div className="flex items-center justify-between">
               <h3 className="font-extrabold text-sm text-foreground tracking-tight">
                 Sertifikasi / Lisensi
@@ -1990,7 +1990,7 @@ export default function DashboardProfile({
           </div>
 
           {/* Pengalaman Organisasi Section */}
-          <div className="bg-card border border-border/70 rounded-2xl p-5 shadow-md space-y-4 relative">
+          <div className="bg-card border border-border/70 rounded-2xl p-5 shadow-lg space-y-4 relative">
             <div className="flex items-center justify-between">
               <h3 className="font-extrabold text-sm text-foreground tracking-tight">
                 Pengalaman Organisasi
@@ -2070,7 +2070,7 @@ export default function DashboardProfile({
                   {formData.organization.map((org: string) => (
                     <div
                       key={org}
-                      className="flex items-center justify-between bg-background/50 border border-border/80 text-foreground text-xs font-semibold p-3 rounded-xl shadow-sm hover:border-border transition-all"
+                      className="flex items-center justify-between bg-background/50 border border-border/80 text-foreground text-xs font-semibold p-3 rounded-xl shadow-lg hover:border-border transition-all"
                     >
                       <div className="flex items-center gap-2 min-w-0">
                         <User className="h-3 w-3 text-foreground shrink-0" />
@@ -2126,7 +2126,7 @@ export default function DashboardProfile({
           </div>
 
           {/* Referensi Pekerjaan Section */}
-          <div className="bg-card border border-border/70 rounded-2xl p-5 shadow-md space-y-4 relative">
+          <div className="bg-card border border-border/70 rounded-2xl p-5 shadow-lg space-y-4 relative">
             <div className="flex items-center justify-between">
               <h3 className="font-extrabold text-sm text-foreground tracking-tight">
                 Referensi Pekerjaan Minat

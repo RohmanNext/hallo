@@ -215,7 +215,7 @@ const JobDetailPage: React.FC = () => {
             {/* LEFT/MAIN CONTAINER */}
             <div className="flex-1 w-full space-y-6">
               {/* 3.2 Job / ID Box - Company Mini Profile */}
-              <Card className="border border-border/70 bg-card/50 backdrop-blur-sm shadow-md overflow-hidden relative">
+              <Card className="bg-card/50 backdrop-blur-sm shadow-lg overflow-hidden relative">
                 <CardContent className="p-5 md:p-6">
                   {/* Header: Logo + Title + Company */}
                   <div className="flex items-start gap-4 mb-6">
@@ -354,7 +354,7 @@ const JobDetailPage: React.FC = () => {
               </Card>
 
               {/* Kualifikasi (Persyaratan, Skill, Benefit Kerja) */}
-              <Card className="border border-border/70 bg-card/50 backdrop-blur-sm shadow-md">
+              <Card className="bg-card/50 backdrop-blur-sm shadow-lg">
                 <CardContent className="p-6 md:p-8 space-y-6">
                   <div>
                     <h2 className="text-base font-bold text-foreground mb-3">
@@ -450,7 +450,7 @@ const JobDetailPage: React.FC = () => {
               </Card>
 
               {/* Description */}
-              <Card className="border border-border/70 bg-card/50 backdrop-blur-sm shadow-md">
+              <Card className="bg-card/50 backdrop-blur-sm shadow-lg">
                 <CardContent className="p-6 md:p-8 space-y-4">
                   <div>
                     <h2 className="text-base font-bold text-foreground border-b pb-2 mb-4">
@@ -480,7 +480,7 @@ const JobDetailPage: React.FC = () => {
               </div>
 
               {/* Tentang Company */}
-              <Card className="border border-border/70 bg-card/50 backdrop-blur-sm shadow-md">
+              <Card className="bg-card/50 backdrop-blur-sm shadow-lg">
                 <CardContent className="p-6 md:p-8 space-y-6">
                   <div className="flex items-center justify-between flex-wrap border-b pb-3.5 mb-4.5 gap-2">
                     <div className="flex items-center gap-1.5">
@@ -714,7 +714,7 @@ const JobDetailPage: React.FC = () => {
                       onClick={() =>
                         router.push(`/pencari-kerja/jobs/${recJob.id}`)
                       }
-                      className="group relative flex flex-col justify-between rounded-xl border border-border/70 py-4 px-5 cursor-pointer transition-all duration-300 shadow-md hover:shadow-lg hover:border-primary/50 bg-card"
+                      className="group relative flex flex-col justify-between rounded-xl py-4 px-5 cursor-pointer transition-all duration-300 shadow-lg hover:shadow-lg bg-card"
                     >
                       <div className="flex flex-col justify-between h-full">
                         <div>
@@ -823,7 +823,7 @@ const JobDetailPage: React.FC = () => {
             {/* RIGHT SIDEBAR PANEL */}
             <aside className="w-full lg:w-87 shrink-0 space-y-6">
               {/* Loker Ini Dikelola Oleh */}
-              <Card className="border border-border/70 bg-card/50 backdrop-blur-sm shadow-md mb-8">
+              <Card className="bg-card/50 backdrop-blur-sm shadow-lg mb-8">
                 <CardContent className="p-5 space-y-4">
                   <h3 className="text-xs font-bold text-muted-foreground/80 tracking-wide">
                     Dikelola oleh
@@ -881,7 +881,7 @@ const JobDetailPage: React.FC = () => {
                       onClick={() =>
                         router.push(`/pencari-kerja/jobs/${recJob.id}`)
                       }
-                      className="group relative flex flex-col justify-between rounded-xl border border-border/70 py-4 px-5 cursor-pointer transition-all duration-300 shadow-md hover:shadow-lg hover:border-primary/50 bg-card"
+                      className="group relative flex flex-col justify-between rounded-xl py-4 px-5 cursor-pointer transition-all duration-300 shadow-lg hover:shadow-lg bg-card"
                     >
                       <div className="flex flex-col justify-between h-full">
                         <div>

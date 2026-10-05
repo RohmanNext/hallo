@@ -101,7 +101,7 @@ export default function DashboardSettings() {
   if (!user) return null;
 
   return (
-    <div className="bg-card border border-border/70 rounded-3xl p-5 md:p-6 shadow-md flex flex-col h-[882px] overflow-hidden animate-in fade-in duration-300">
+    <div className="bg-card rounded-3xl p-5 md:p-6 shadow-lg flex flex-col h-[882px] overflow-hidden animate-in fade-in duration-300">
       <div className="space-y-1 pb-4 border-b shrink-0 mb-4">
         <h2 className="text-base font-extrabold text-foreground tracking-tight">
           Pengaturan
@@ -111,7 +111,7 @@ export default function DashboardSettings() {
       <div className="flex-1 overflow-y-auto pr-1 smooth-scroll space-y-3.5 pb-1 pt-1.5">
         
         {/* Account Info Group Box */}
-        <div className="border border-border/70 bg-card rounded-xl overflow-hidden divide-y divide-border/60 shadow-xs">
+        <div className="border border-border/70 bg-card rounded-xl overflow-hidden divide-y divide-border/60 shadow-sm">
           
           {/* Email Row */}
           <div className="p-3.5 flex items-center justify-between gap-5">
@@ -372,13 +372,13 @@ export default function DashboardSettings() {
                   onClick={() => setTheme(t.id)}
                   className={`relative flex flex-col items-center gap-1.5 p-2 rounded-xl border transition-all cursor-pointer group ${
                     isActive
-                      ? 'border-primary bg-primary/10 shadow-sm'
+                      ? 'border-primary bg-primary/10 shadow-lg'
                       : 'border-border/60 hover:border-primary/50 hover:bg-muted/30'
                   }`}
                 >
                   {/* Swatch */}
                   <div
-                    className="w-full h-9 rounded-lg overflow-hidden relative flex items-center justify-center shadow-xs"
+                    className="w-full h-9 rounded-lg overflow-hidden relative flex items-center justify-center shadow-sm"
                     style={{ background: t.bg }}
                   >
                     <div
@@ -409,7 +409,7 @@ export default function DashboardSettings() {
             Pengaturan Notifikasi
           </h3>
 
-          <div className="border border-border/70 bg-card rounded-xl overflow-hidden divide-y divide-border/60 shadow-xs">
+          <div className="border border-border/70 bg-card rounded-xl overflow-hidden divide-y divide-border/60 shadow-sm">
             {/* Daily Notif */}
             <div className="p-3.5 flex items-center justify-between gap-5">
               <div className="space-y-0.5">
@@ -431,7 +431,7 @@ export default function DashboardSettings() {
                 }`}
               >
                 <span
-                  className={`pointer-events-none inline-block h-4 w-4 transform rounded-full bg-white shadow-xs ring-0 transition duration-200 ease-in-out ${
+                  className={`pointer-events-none inline-block h-4 w-4 transform rounded-full bg-white shadow-sm ring-0 transition duration-200 ease-in-out ${
                     dailyNotif ? 'translate-x-4' : 'translate-x-0'
                   }`}
                 />
@@ -459,7 +459,7 @@ export default function DashboardSettings() {
                 }`}
               >
                 <span
-                  className={`pointer-events-none inline-block h-4 w-4 transform rounded-full bg-white shadow-xs ring-0 transition duration-200 ease-in-out ${
+                  className={`pointer-events-none inline-block h-4 w-4 transform rounded-full bg-white shadow-sm ring-0 transition duration-200 ease-in-out ${
                     weeklyNotif ? 'translate-x-4' : 'translate-x-0'
                   }`}
                 />
@@ -474,7 +474,7 @@ export default function DashboardSettings() {
             Danger Zone
           </h3>
 
-          <div className="border border-rose-500/20 bg-rose-500/5 hover:bg-rose-500/10 p-3.5 rounded-xl flex items-center justify-between shadow-xs transition-colors">
+          <div className="border border-rose-500/20 bg-rose-500/5 hover:bg-rose-500/10 p-3.5 rounded-xl flex items-center justify-between shadow-sm transition-colors">
             <div className="flex items-center gap-2.5">
               <AlertTriangle className="h-4.5 w-4.5 text-rose-500 shrink-0" />
               <div>

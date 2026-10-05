@@ -104,9 +104,9 @@ const Hero: React.FC = () => {
         {/* Search Inputs */}
         <div className="flex flex-col md:flex-row items-center justify-center gap-3 max-w-3xl mx-auto px-2">
           {/* Keyword Input */}
-          <div className="relative flex-1 w-full">
+          <div className="relative flex-1 w-full group">
             {!mounted || theme === 'white' ? (
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-[#5c6f84]" />
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-[#5c6f84] group-focus-within:text-[#1899d6] transition-colors" />
             ) : (
               <Briefcase className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
             )}
@@ -115,7 +115,7 @@ const Hero: React.FC = () => {
               placeholder="Posisi pekerjaan atau kata kunci"
               className={`pl-9 pr-4 h-10 w-full text-xs border rounded-lg focus:outline-none transition-all ${
                 !mounted || theme === 'white'
-                  ? 'bg-[#eef5fa] border-border text-[#334155] placeholder-[#5c6f84] focus:ring-1 focus:ring-[#eef5fa]/50'
+                  ? 'bg-[#eef5fa] focus:bg-[#cfe6f3] border-0 text-[#334155] placeholder-[#5c6f84] focus:placeholder-[#4a6b7c] focus:ring-1 focus:ring-transparent transition-colors'
                   : 'bg-card/50 border-border text-foreground placeholder-zinc-500 dark:placeholder-zinc-400 focus:ring-1 focus:ring-primary'
               }`}
               value={keyword}
@@ -127,11 +127,11 @@ const Hero: React.FC = () => {
           </div>
 
           {/* Location Select */}
-          <div className="w-full md:w-64 relative" ref={locationDropdownRef}>
+          <div className="w-full md:w-64 relative group" ref={locationDropdownRef}>
             <MapPin
               className={`absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 z-10 pointer-events-none ${
                 !mounted || theme === 'white'
-                  ? 'text-[#5c6f84]'
+                  ? 'text-[#5c6f84] group-focus-within:text-[#1899d6] transition-colors'
                   : 'text-muted-foreground'
               }`}
             />
@@ -143,7 +143,7 @@ const Hero: React.FC = () => {
               }}
               className={`w-full h-10 pl-9 pr-9 text-xs rounded-lg outline-none cursor-pointer text-left flex items-center border transition-all ${
                 !mounted || theme === 'white'
-                  ? 'bg-[#eef5fa] border-border text-[#334155]'
+                  ? 'bg-[#eef5fa] focus:bg-[#cfe6f3] border-0 text-[#334155] transition-colors'
                   : 'bg-card/50 border-border text-foreground'
               }`}
             >
@@ -191,7 +191,7 @@ const Hero: React.FC = () => {
                     onChange={(e) => setLocationSearch(e.target.value)}
                     className={`w-full px-2 py-1 text-xs rounded outline-none ${
                       !mounted || theme === 'white'
-                        ? 'bg-[#eef5fa] text-[#334155] placeholder-[#5c6f84]'
+                        ? 'bg-[#eef5fa] focus:bg-[#cfe6f3] text-[#334155] placeholder-[#5c6f84] transition-colors'
                         : 'bg-muted text-foreground placeholder-muted-foreground'
                     }`}
                   />

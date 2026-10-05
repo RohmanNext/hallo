@@ -30,7 +30,7 @@ export default function CoinCreditTab() {
   if (!user) return null;
 
   return (
-    <div className="bg-card border border-border/70 rounded-3xl p-5 md:p-6 shadow-md flex flex-col h-[880px] overflow-hidden animate-in fade-in duration-300">
+    <div className="bg-card rounded-3xl p-5 md:p-6 shadow-lg flex flex-col h-[880px] overflow-hidden animate-in fade-in duration-300">
       <div className="space-y-1 pb-4 border-b shrink-0 mb-4">
         <h2 className="text-base font-extrabold text-foreground tracking-tight">
           Coin & Credit
@@ -52,7 +52,7 @@ export default function CoinCreditTab() {
                 Gunakan koin Anda untuk mengaktifkan add-on rekrutmen eksklusif.
               </p>
             </div>
-            <div className="bg-card/60 backdrop-blur-md border border-border/80 rounded-xl p-2 sm:px-3.5 flex items-center gap-2.5 shadow-sm shrink-0">
+            <div className="bg-card/60 backdrop-blur-md border border-border/80 rounded-xl p-2 sm:px-3.5 flex items-center gap-2.5 shadow-lg shrink-0">
               <div className="p-1.5 rounded-lg bg-amber-500/10 border border-amber-500/20 scale-90">
                 <CustomCoinsIcon />
               </div>

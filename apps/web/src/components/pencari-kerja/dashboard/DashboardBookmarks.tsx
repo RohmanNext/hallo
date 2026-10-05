@@ -45,7 +45,7 @@ export default function DashboardBookmarks() {
   const paginatedJobs = bookmarked.slice(startIndex, startIndex + itemsPerPage);
 
   return (
-    <div className="bg-card border border-border/70 rounded-3xl p-5 md:p-6 shadow-sm flex flex-col h-[882px] overflow-hidden animate-in fade-in duration-300 justify-between">
+    <div className="bg-card rounded-3xl p-5 md:p-6 shadow-lg flex flex-col h-[882px] overflow-hidden animate-in fade-in duration-300 justify-between">
       <div className="flex flex-col flex-1 overflow-hidden">
         <div className="space-y-1 pb-4 border-b shrink-0 mb-4">
           <span className="text-base font-extrabold text-foreground tracking-tight block">
@@ -71,7 +71,7 @@ export default function DashboardBookmarks() {
                     onClick={() => window.location.href = `/pencari-kerja/jobs/${job.id}`}
                   >
                     {/* Company Logo */}
-                    <div className="h-9 w-9 bg-white border border-border/70 rounded-xl p-1.5 flex items-center justify-center shrink-0 overflow-hidden shadow-xs">
+                    <div className="h-9 w-9 bg-white border border-border/70 rounded-xl p-1.5 flex items-center justify-center shrink-0 overflow-hidden shadow-sm">
                       {job.logo ? (
                         <Image
                           src={job.logo}
@@ -152,7 +152,7 @@ export default function DashboardBookmarks() {
                     <Button
                       key={pageNum}
                       variant="outline"
-                      className="h-9 w-9 text-xs font-bold transition-all rounded-lg cursor-pointer shadow-sm"
+                      className="h-9 w-9 text-xs font-bold transition-all rounded-lg cursor-pointer shadow-lg"
                       style={
                         isCurrent
                           ? {
